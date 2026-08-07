@@ -1,0 +1,12 @@
+name: patient-consent-service
+port: 8102
+lang: python
+description: "patient-consent-service \u2014 domain: patients"
+http_deps:
+- patients-service
+- audit-log-service
+publishes:
+- patient.consent.updated
+- audit.event
+subscribes:
+- patient.created
